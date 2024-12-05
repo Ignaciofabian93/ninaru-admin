@@ -8,11 +8,6 @@ export default function Navbar() {
         <Link href={"/dashboard"} className="pointer">
           <Image src={"/logo.png"} alt="logo" width={100} height={100} />
         </Link>
-        <ul className="text-white pr-8">
-          <Link href={"/"}>
-            <li>Editar</li>
-          </Link>
-        </ul>
       </nav>
     </header>
   );

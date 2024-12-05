@@ -1,11 +1,12 @@
 import AuthGuard from "@/ui/authguard";
 import PageLayout from "@/ui/layout";
+import MenuModule from "./_components/menu";
 
 export default function DashboardPage() {
   return (
     <AuthGuard>
       <PageLayout>
-        <h1>Dashboard</h1>
+        <MenuModule />
       </PageLayout>
     </AuthGuard>
   );
