@@ -1,6 +1,8 @@
 "use client";
 import Button from "@/ui/button";
 import { useState } from "react";
+import ModuleWrapper from "./moduleWrapper";
+import ModuleTitle from "./moduleTitle";
 
 export default function MenuModule() {
   const [editIndex, setEditIndex] = useState<number | null>(null);
@@ -21,11 +23,11 @@ export default function MenuModule() {
 
   const field = "w-[200px] h-[40px] rounded-md border-[1px] border-slate-500/50 flex items-center px-4 mx-2";
   return (
-    <section className="w-[90%] h-fit p-4 border-[1px] border-slate-500/50 mx-auto rounded-md shadow-md shadow-slate-500/40">
+    <ModuleWrapper>
       <div className="w-full flex items-center justify-between">
-        <h2 className="text-3xl font-medium">Titulos en Menu</h2>
+        <ModuleTitle title="Titulos en barra de navegacion" />
         <div className="flex gap-8">
-          <Button text="Agregar" onClick={addTitle} type="primary" />
+          <Button text="Agregar titulo" onClick={addTitle} type="primary" />
           <Button text="Guardar" onClick={addTitle} type="primary" />
         </div>
       </div>
@@ -61,6 +63,6 @@ export default function MenuModule() {
           </div>
         ))}
       </div>
-    </section>
+    </ModuleWrapper>
   );
 }
